@@ -1,3 +1,4 @@
+using Cinemachine;
 using FishNet.Object;
 using UnityEngine;
 using UnityEngine.AI;
@@ -8,15 +9,14 @@ public class PlayerNetwork : NetworkBehaviour
 
     NavMeshAgent navMeshAgent;
 
+    private CinemachineVirtualCamera _camera;
+
     [SerializeField]
     private InputActionAsset inputActions;
 
     private InputActionMap playerActionMap;
 
     private InputAction movement;
-
-    [SerializeField]
-    private Camera mainCamera;
 
     [SerializeField]
     [Range(0, 0.99f)]
@@ -43,6 +43,12 @@ public class PlayerNetwork : NetworkBehaviour
         movement.Enable();
         playerActionMap.Enable();
         inputActions.Enable();
+    }
+
+    private void Start()
+    {
+        _camera = GameObject.Find("Follow Camera").GetComponent<CinemachineVirtualCamera>();
+        _camera.Follow = transform;
     }
 
     private void HandleMovementAction(InputAction.CallbackContext context)
