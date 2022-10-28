@@ -207,7 +207,6 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 0}
   inputActions: {fileID: -944628639613478452, guid: 4419d82f33d36e848b3ed5af4c8da37e,
     type: 3}
-  mainCamera: {fileID: 0}
   smoothing: 0.25
 --- !u!54 &-3601851160558702450
 Rigidbody:

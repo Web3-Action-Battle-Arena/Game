@@ -236,7 +236,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &5812557208386113884 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -6242902058951980707, guid: c16b639ea67f94b0bb2d70b4cbba7d65,
