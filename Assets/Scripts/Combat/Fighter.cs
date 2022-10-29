@@ -12,22 +12,29 @@ public class Fighter : NetworkBehaviour
     [SerializeField] Transform leftHandTransform = null;
     [SerializeField] Weapon defaultWeapon = null;
 
+    private Animator _animator;
+
     public float baseDamge = 5f;
 
-    Health target;
     float timeSinceLastAttack = Mathf.Infinity;
 
     Weapon currentWeapon;
 
-    private void Start()
+    private void Awake()
     {
-        EquipWeapon(defaultWeapon);
+        _animator = GetComponent<Animator>();
+    }
 
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+        EquipWeapon(defaultWeapon);
     }
 
     // trigger attack on left mouse click
     private void Update()
     {
+        if (!base.IsOwner) return;
         timeSinceLastAttack += Time.deltaTime;
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
@@ -53,25 +60,23 @@ public class Fighter : NetworkBehaviour
 
     private void TriggerAttack()
     {
-        GetComponent<Animator>().ResetTrigger("StopAttack");
-        GetComponent<Animator>().SetTrigger("Attack");
+        _animator.ResetTrigger("StopAttack");
+        _animator.SetTrigger("Attack");
+
     }
 
     private void StopAttack()
     {
-        GetComponent<Animator>().SetTrigger("StopAttack");
-        GetComponent<Animator>().ResetTrigger("Attack");
+        _animator.SetTrigger("StopAttack");
+        _animator.ResetTrigger("Attack");
     }
-
 
     // Animation Event
     void Hit()
     {
-        if (target == null) return;
-        target.TakeDamage(gameObject, baseDamge);
+        print("hit triggered");
 
     }
-
 
     private void AttachWeapon(Weapon weapon)
     {

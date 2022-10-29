@@ -50,10 +50,16 @@ public class PlayerNetwork : NetworkBehaviour
         inputActions.Enable();
     }
 
-    private void Start()
+
+    public override void OnStartClient()
     {
-        _camera = GameObject.Find("Follow Camera").GetComponent<CinemachineVirtualCamera>();
-        _camera.Follow = transform;
+        base.OnStartClient();
+        if (base.IsOwner)
+        {
+            _camera = GameObject.Find("Follow Camera").GetComponent<CinemachineVirtualCamera>();
+            _camera.Follow = transform;
+        }
+
     }
 
     private void HandleMovementAction(InputAction.CallbackContext context)
@@ -73,7 +79,7 @@ public class PlayerNetwork : NetworkBehaviour
         else
         {
             // max value should be navmeshagent.speed
-            currentMovementSpeed = Mathf.Clamp(0.5f + currentMovementSpeed + (5 * Time.deltaTime), 0, navMeshAgent.speed);
+            currentMovementSpeed = navMeshAgent.speed;
 
         }
     }

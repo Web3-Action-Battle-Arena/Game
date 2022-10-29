@@ -11,7 +11,7 @@ public class Health : NetworkBehaviour
 
     bool isDead = false;
 
-    public void TakeDamage(GameObject instigator, float damage)
+    public void TakeDamage(float damage)
     {
         print(gameObject.name + " took damage: " + damage);
         healthPoints = Mathf.Max(healthPoints - damage, 0);
@@ -32,6 +32,15 @@ public class Health : NetworkBehaviour
         return healthPoints;
     }
 
+    public float getPercentage()
+    {
+        return 100 * GetFraction();
+    }
+
+    public float GetFraction()
+    {
+        return healthPoints / 100f;
+    }
 
     private void Die()
     {
