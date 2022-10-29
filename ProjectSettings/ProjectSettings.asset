@@ -771,6 +771,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
+    Android: FISHNET;FISHNET_PRO
     Standalone: FISHNET;FISHNET_PRO
   additionalCompilerArguments: {}
   platformArchitecture: {}
