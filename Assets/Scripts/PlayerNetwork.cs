@@ -18,6 +18,8 @@ public class PlayerNetwork : NetworkBehaviour
 
     private InputAction movement;
 
+    private Animator _animator;
+
     [SerializeField]
     [Range(0, 0.99f)]
     private float smoothing = 0.25f;
@@ -25,6 +27,8 @@ public class PlayerNetwork : NetworkBehaviour
     private Vector3 targetDirection;
 
     private float lerpTime = 0;
+
+    public float currentMovementSpeed = 0;
 
     private Vector3 lastDirection;
 
@@ -41,6 +45,7 @@ public class PlayerNetwork : NetworkBehaviour
         movement.canceled += HandleMovementAction;
         movement.performed += HandleMovementAction;
         movement.Enable();
+        _animator = GetComponent<Animator>();
         playerActionMap.Enable();
         inputActions.Enable();
     }
@@ -58,10 +63,26 @@ public class PlayerNetwork : NetworkBehaviour
         movementVector = new Vector3(input.x, 0, input.y);
     }
 
+    private void UpdateMovementSpeed()
+    {
+        // if movementVector is 0 then set currentMovementSpeed to 0, else increment currentMovementSpeed by 1 every second
+        if (movementVector == Vector3.zero)
+        {
+            currentMovementSpeed = 0;
+        }
+        else
+        {
+            // max value should be navmeshagent.speed
+            currentMovementSpeed = Mathf.Clamp(0.5f + currentMovementSpeed + (5 * Time.deltaTime), 0, navMeshAgent.speed);
+
+        }
+    }
+
     private void Update()
     {
         if (!base.IsOwner) return;
         movementVector.Normalize();
+        UpdateMovementSpeed();
         if (movementVector != lastDirection)
         {
             lerpTime = 0;
@@ -74,7 +95,7 @@ public class PlayerNetwork : NetworkBehaviour
                 Mathf.Clamp01(lerpTime * targetLerpSpeed * (1 - smoothing)));
 
         navMeshAgent
-            .Move(targetDirection * navMeshAgent.speed * Time.deltaTime);
+            .Move(targetDirection * currentMovementSpeed * Time.deltaTime);
 
         Vector3 lookDirection = movementVector;
         if (lookDirection != Vector3.zero)
@@ -88,5 +109,7 @@ public class PlayerNetwork : NetworkBehaviour
         }
 
         lerpTime += Time.deltaTime;
+        // Update animator
+        _animator.SetFloat("ForwardMotion", currentMovementSpeed);
     }
 }
