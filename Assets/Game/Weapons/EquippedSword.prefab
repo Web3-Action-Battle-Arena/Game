@@ -138,4 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 127dd354306884af693cf29b8046d6d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 0}
+  _networkObjectCache: {fileID: 0}
   weapon: {fileID: 11400000, guid: 9b1db9cf7899d468ea307b8c628b28be, type: 2}

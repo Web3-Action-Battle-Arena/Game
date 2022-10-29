@@ -45,7 +45,15 @@ public class Health : NetworkBehaviour
     private void Die()
     {
         isDead = true;
-        GetComponent<Animator>().SetTrigger("Die");
+        if (TryGetComponent<Animator>(out Animator animator) && !IsServer)
+        {
+
+            GetComponent<Animator>().SetTrigger("Die");
+            return;
+        }
+
+        print(gameObject.name + " died.");
+        Destroy(gameObject);
     }
 
 }
