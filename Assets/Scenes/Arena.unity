@@ -618,6 +618,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2600865901010049889, guid: 13cd151d8360d4421a5b394425b3ca91,
         type: 3}
+      propertyPath: _playerPrefab
+      value: 
+      objectReference: {fileID: 775133995344351854, guid: 43b25ec34319841089ca4a62f7d89b31,
+        type: 3}
+    - target: {fileID: 2600865901010049889, guid: 13cd151d8360d4421a5b394425b3ca91,
+        type: 3}
       propertyPath: Spawns.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -1775,8 +1781,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942948552}
-  m_LocalRotation: {x: -0.27192014, y: 0.009276372, z: -0.0025118906, w: -0.96227187}
-  m_LocalPosition: {x: -0.13529015, y: 6.2272973, z: -10.052263}
+  m_LocalRotation: {x: -0.35311463, y: 0.0034146258, z: -0.0011762244, w: -0.9355731}
+  m_LocalPosition: {x: -0.17201978, y: 9.395366, z: -8.106762}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3306,8 +3312,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616844018}
-  m_LocalRotation: {x: -0.27192014, y: 0.009276372, z: -0.0025118906, w: -0.96227187}
-  m_LocalPosition: {x: -0.13529015, y: 6.2272973, z: -10.052263}
+  m_LocalRotation: {x: -0.35311463, y: 0.0034146258, z: -0.0011762244, w: -0.9355731}
+  m_LocalPosition: {x: -0.17201978, y: 9.395366, z: -8.106762}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3877,8 +3883,8 @@ MonoBehaviour:
   m_ScreenX: 0.5
   m_ScreenY: 0.5
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0
-  m_DeadZoneHeight: 0
+  m_DeadZoneWidth: 0.1
+  m_DeadZoneHeight: 0.1
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.8
