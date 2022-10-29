@@ -389,7 +389,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 909813283}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -761,6 +761,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d01b2f47d51f46a29b38a38c5a3910c, type: 3}
+--- !u!1 &2009251117 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2600865901010049900, guid: 13cd151d8360d4421a5b394425b3ca91,
+    type: 3}
+  m_PrefabInstance: {fileID: 2600865900865077243}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2009251121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009251117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f48f002b825cbd45a19bd96d90f9edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _unreliableMTU: 1023
+  _ipv4BindAddress: 
+  _ipv6BindAddress: 
+  _port: 7770
+  _maximumClients: 2
+  _clientAddress: localhost
+  _timeout: 15
 --- !u!1001 &2600865900865077243
 PrefabInstance:
   m_ObjectHideFlags: 0
