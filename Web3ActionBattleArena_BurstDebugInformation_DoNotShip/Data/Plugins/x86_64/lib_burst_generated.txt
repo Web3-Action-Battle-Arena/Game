@@ -142,7 +142,6 @@ Library: lib_burst_generated
 --compilation-defines=MODULE_PHYSICS_EXISTS
 --compilation-defines=MODULE_PHYSICS_2D_EXISTS
 --compilation-defines=MODULE_PARTICLE_SYSTEM_EXISTS
---compilation-defines=TIMELINE_FRAMEACCURATE
 --compilation-defines=CINEMACHINE_TIMELINE
 --compilation-defines=CINEMACHINE_PHYSICS_2D
 --compilation-defines=CINEMACHINE_PHYSICS
@@ -151,6 +150,7 @@ Library: lib_burst_generated
 --compilation-defines=CINEMACHINE_UNITY_INPUTSYSTEM
 --compilation-defines=CINEMACHINE_UNITY_ANIMATION
 --compilation-defines=CINEMACHINE_UNITY_IMGUI
+--compilation-defines=TIMELINE_FRAMEACCURATE
 --linker-options=PdbAltPath="Web3ActionBattleArena_Data/Plugins/x86_64"
 --generate-link-xml=Temp\burst.link.xml
 --output=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Plugins\x86_64\lib_burst_generated
@@ -168,7 +168,9 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Unity.TextMeshPro.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Unity.Burst.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Unity.RenderPipeline.Universal.ShaderLibrary.dll
+--root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Cinemachine.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\QFSW.QC.dll
+--root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Unity.Services.Core.Environments.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\QFSW.QC.Extras.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Unity.Services.Core.Internal.dll
@@ -181,7 +183,6 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\QFSW.QC.UI.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Unity.Services.Core.Device.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\FishNet.Example.dll
---root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Unity.Services.Core.Analytics.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\QFSW.QC.Suggestors.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\QFSW.QC.Demo.dll
@@ -195,7 +196,7 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\QFSW.QC.ScanRules.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Universal.Shaders.dll
---root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Cinemachine.dll
+--root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Assembly-CSharp-firstpass.dll
 --assembly-folder=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\
 --pdb-search-paths=Temp/ManagedSymbols/
 --method=Unity.Burst.Intrinsics.X86, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::DoGetCSRTrampoline()--89425a97f3f500fa810ad03f0c382542
@@ -354,7 +355,6 @@ Library: lib_burst_generated
 --compilation-defines=MODULE_PHYSICS_EXISTS
 --compilation-defines=MODULE_PHYSICS_2D_EXISTS
 --compilation-defines=MODULE_PARTICLE_SYSTEM_EXISTS
---compilation-defines=TIMELINE_FRAMEACCURATE
 --compilation-defines=CINEMACHINE_TIMELINE
 --compilation-defines=CINEMACHINE_PHYSICS_2D
 --compilation-defines=CINEMACHINE_PHYSICS
@@ -363,6 +363,7 @@ Library: lib_burst_generated
 --compilation-defines=CINEMACHINE_UNITY_INPUTSYSTEM
 --compilation-defines=CINEMACHINE_UNITY_ANIMATION
 --compilation-defines=CINEMACHINE_UNITY_IMGUI
+--compilation-defines=TIMELINE_FRAMEACCURATE
 --linker-options=PdbAltPath="Web3ActionBattleArena_Data/Plugins/x86_64"
 --generate-link-xml=Temp\burst.link.xml
 --output=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Plugins\x86_64\lib_burst_generated
@@ -380,7 +381,9 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Unity.TextMeshPro.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Unity.Burst.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Unity.RenderPipeline.Universal.ShaderLibrary.dll
+--root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Cinemachine.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\QFSW.QC.dll
+--root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Unity.Services.Core.Environments.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\QFSW.QC.Extras.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Unity.Services.Core.Internal.dll
@@ -393,7 +396,6 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\QFSW.QC.UI.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Unity.Services.Core.Device.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\FishNet.Example.dll
---root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Unity.Services.Core.Analytics.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\QFSW.QC.Suggestors.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\QFSW.QC.Demo.dll
@@ -407,7 +409,7 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\QFSW.QC.ScanRules.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll
 --root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Universal.Shaders.dll
---root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Cinemachine.dll
+--root-assembly=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\Assembly-CSharp-firstpass.dll
 --assembly-folder=C:\Users\wojdz\Desktop\projekty\Web3ActionBattleArena\Temp\StagingArea\Data\Managed\
 --pdb-search-paths=Temp/ManagedSymbols/
 --method=Unity.Jobs.IJobForExtensions+ForJobStruct`1[[UnityEngine.Rendering.Universal.ReorderJob`1[[UnityEngine.Rendering.Universal.LightMinMaxZ, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(UnityEngine.Rendering.Universal.ReorderJob`1[[UnityEngine.Rendering.Universal.LightMinMaxZ, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--e943843acfb78f5f2f3716a6553740d9
