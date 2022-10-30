@@ -1,11 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
 using Cinemachine;
+using FishNet.Managing;
 using FishNet.Object;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
 
-public class PlayerNetwork : NetworkBehaviour
+public class PlayerController : NetworkBehaviour
 {
+
 
     NavMeshAgent navMeshAgent;
 
@@ -50,7 +54,6 @@ public class PlayerNetwork : NetworkBehaviour
         inputActions.Enable();
     }
 
-
     public override void OnStartClient()
     {
         base.OnStartClient();
@@ -59,12 +62,15 @@ public class PlayerNetwork : NetworkBehaviour
             _camera = GameObject.Find("Follow Camera").GetComponent<CinemachineVirtualCamera>();
             _camera.Follow = transform;
         }
+        else
+        {
+            gameObject.GetComponent<PlayerController>().enabled = false;
+        }
 
     }
 
     private void HandleMovementAction(InputAction.CallbackContext context)
     {
-        if (!base.IsOwner) return;
         Vector2 input = context.ReadValue<Vector2>();
         movementVector = new Vector3(input.x, 0, input.y);
     }
@@ -86,7 +92,6 @@ public class PlayerNetwork : NetworkBehaviour
 
     private void Update()
     {
-        if (!base.IsOwner) return;
         movementVector.Normalize();
         UpdateMovementSpeed();
         if (movementVector != lastDirection)

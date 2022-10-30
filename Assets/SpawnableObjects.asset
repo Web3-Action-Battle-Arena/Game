@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: SpawnableObjects
   m_EditorClassIdentifier: 
   _prefabs:
-  - {fileID: 775133995344351854, guid: 43b25ec34319841089ca4a62f7d89b31, type: 3}
+  - {fileID: 5342441092263748759, guid: 43b25ec34319841089ca4a62f7d89b31, type: 3}
+  - {fileID: 5426584515054867515, guid: 7a2d4c89010674ae7a7f1465e523daaa, type: 3}
