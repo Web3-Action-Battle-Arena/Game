@@ -370,6 +370,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1252186101437265616}
     m_Modifications:
+    - target: {fileID: -896066185018109829, guid: 51efcf66ebe0c478b9bf5c0906ac52e1,
+        type: 3}
+      propertyPath: _networkObjectCache
+      value: 
+      objectReference: {fileID: 5048447619027547500}
+    - target: {fileID: -896066185018109829, guid: 51efcf66ebe0c478b9bf5c0906ac52e1,
+        type: 3}
+      propertyPath: _componentIndexCache
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -130816754238151090, guid: 51efcf66ebe0c478b9bf5c0906ac52e1,
         type: 3}
       propertyPath: <IsNested>k__BackingField
@@ -378,7 +388,7 @@ PrefabInstance:
     - target: {fileID: -130816754238151090, guid: 51efcf66ebe0c478b9bf5c0906ac52e1,
         type: 3}
       propertyPath: _networkBehaviours.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -130816754238151090, guid: 51efcf66ebe0c478b9bf5c0906ac52e1,
         type: 3}
@@ -388,6 +398,11 @@ PrefabInstance:
     - target: {fileID: -130816754238151090, guid: 51efcf66ebe0c478b9bf5c0906ac52e1,
         type: 3}
       propertyPath: _networkBehaviours.Array.data[0]
+      value: 
+      objectReference: {fileID: 5453865793554678617}
+    - target: {fileID: -130816754238151090, guid: 51efcf66ebe0c478b9bf5c0906ac52e1,
+        type: 3}
+      propertyPath: _networkBehaviours.Array.data[1]
       value: 
       objectReference: {fileID: 844115187207762944}
     - target: {fileID: -130816754238151090, guid: 51efcf66ebe0c478b9bf5c0906ac52e1,
@@ -481,7 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ca501124e4c414f9d507ce16346a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 0
+  _componentIndexCache: 1
   _addedNetworkObject: {fileID: 775133995344351854}
   _networkObjectCache: {fileID: 5048447619027547500}
   health: {fileID: 1874863452493830291}
@@ -504,3 +519,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4044389173698401058}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5453865793554678617 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -896066185018109829, guid: 51efcf66ebe0c478b9bf5c0906ac52e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 4044389173698401058}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2381892877866061754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2836e36774ca1c4bbbee976e17b649c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
